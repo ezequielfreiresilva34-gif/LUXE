@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXE — Moda Premium</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- SDK do Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<base target="_blank">
+<link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">✦ LUXE</h1>
+      <nav class="nav">
+        <a href="#home">Início</a>
+        <a href="#produtos">Coleção</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button id="btn-carrinho" class="btn-carrinho" type="button">
+        🛒 <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <h2>Elegância em cada detalhe</h2>
+      <p>Peças exclusivas com o brilho que você merece.</p>
+      <a href="#produtos" class="btn-gold">Ver Coleção</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="produtos" class="produtos">
+      <h3 class="section-title">Nossa Coleção</h3>
+      <div id="lista-produtos" class="grid-produtos"></div>
+      <p id="msg-produtos" class="msg"></p>
+    </section>
+  </main>
+
+  <!-- Modal do Carrinho -->
+  <div id="modal-carrinho" class="modal">
+    <div class="modal-content">
+      <button id="fechar-modal" class="fechar" type="button">x</button>
+      <h3>Seu Carrinho</h3>
+      <div id="itens-carrinho"></div>
+      <p class="total">Total: <strong id="total-carrinho">R$ 0,00</strong></p>
+      <form id="form-checkout" class="form-checkout">
+        <input type="text" id="nome-cliente" placeholder="Seu nome" required />
+        <input type="email" id="email-cliente" placeholder="Seu e-mail" required />
+        <button type="submit" class="btn-gold btn-full">Finalizar Pedido</button>
+      </form>
+      <p id="msg-checkout" class="msg"></p>
+    </div>
+  </div>
+
+  <footer id="contato" class="footer">
+    <div class="container">
+      <p>✦ LUXE — contato@luxe.com.br</p>
+      <p>© 2026 Luxe Moda. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
